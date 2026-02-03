@@ -1,0 +1,58 @@
+@import url("https://fonts.googleapis.com/css?family=Catamaran:400,700|Grand+Hotel");
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: url('../../img/unnamed.jpg') no-repeat center center/cover;
+    height: 100vh;
+}
+.menu-button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+    font-size: 30px;
+    cursor: pointer;
+    background: #eee;
+    padding: 5px 12px;
+    border-radius: 5px;
+    display: inline-block;
+}
+.icon-close {
+    display: none;
+}
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #e5e5e5;
+    z-index: 999;
+    display: none;
+    padding-top: 80px;
+}
+.nav ul {
+    list-style: none;
+    padding: 0;
+}
+.nav ul li a {
+    display: block;
+    padding: 15px 25px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+#menu-toggle:checked ~ .nav {
+    display: block;
+}
+#menu-toggle:checked + .menu-button .icon-open {
+    display: none;
+}
+#menu-toggle:checked + .menu-button .icon-close {
+    display: inline-block;
+}
+.content {
+    text-align: center;
+    color: white;
+    padding-top: 150px;
+}
